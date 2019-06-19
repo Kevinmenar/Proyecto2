@@ -7,6 +7,15 @@ public class ReloadWeapons extends BaseCommand{
 	
 	@Override       
     public void execute(String[] args, OutputStream out) { 
+		if(args!=null) {
+			write(out, "Error con los parametros");               
+            return;
+		}
+		
+		Room playRoom = Room.getInstance();
+		String outPut = playRoom.realodWeapons();
+		
+		write(out, outPut);
 		
 	}
 	

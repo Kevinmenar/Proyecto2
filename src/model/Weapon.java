@@ -11,6 +11,7 @@ public class Weapon {
 	public Weapon(String Name) {
 		this.state = true;
 		this.damages = new ArrayList<Damage>();
+		this.name = Name;
 		
 		Random rand = new Random();
 		Damage damageFire = new Damage((rand.nextInt(80)+21), Element.Fire);
@@ -40,7 +41,15 @@ public class Weapon {
 		this.state = !this.state;
 	}
 	
-	public String getName(String pName) {
+	public ArrayList<Damage> getDamages() {
+		return this.damages;
+	}
+	
+	public boolean getState() {
+		return this.state;
+	}
+	
+	public String getName() {
 		return this.name;
 	}
 	

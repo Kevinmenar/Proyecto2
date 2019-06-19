@@ -7,7 +7,10 @@ public class SelectPlayer extends BaseCommand{
 	
 	@Override       
     public void execute(String[] args, OutputStream out) { 
-		
+		if(args.length!=1) {
+			write(out, "Error con los parametros");
+            return;
+		}
 	}
 	
 	@Override              

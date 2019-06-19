@@ -7,7 +7,15 @@ public class Chat extends BaseCommand{
 	
 	@Override       
     public void execute(String[] args, OutputStream out) { 
+		if(args.length!=1) {
+			write(out, "Error con los parametros");
+            return;
+		}
 		
+		Room playRoom = Room.getInstance();
+		String outPut = playRoom.setMessage(args[0]);
+		
+		write(out, outPut);
 	}
 	
 	@Override              

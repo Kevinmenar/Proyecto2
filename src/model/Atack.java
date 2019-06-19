@@ -7,7 +7,16 @@ public class Atack extends BaseCommand{
 	
 	@Override       
     public void execute(String[] args, OutputStream out) { 
+		if (args.length != 2) {               
+            write(out, "Error con los parametros");               
+            return;   
+        }
 		
+		Room playRoom = Room.getInstance();
+		String outPut = playRoom.makeAHit(args[1], args[0]);
+		
+		write(out, outPut);
+	
 	}
 	
 	@Override              
