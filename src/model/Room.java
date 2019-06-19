@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Room extends AbstractObservable {
+public class Room extends AbstractObservable implements Cloneable{
 	private List<Player> players = new ArrayList<Player>();
 	private static Room room;
 	
@@ -24,7 +24,7 @@ public class Room extends AbstractObservable {
     	players.add(pPlayer);
     }
     
-    public void notifyPlayers() {
-    	notifyAllObservers("players", this); 
-    }
+    //public void notifyPlayers() {
+    	//notifyAllObservers("players", this); 
+    //}
 }

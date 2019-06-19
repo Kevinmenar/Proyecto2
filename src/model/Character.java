@@ -53,7 +53,7 @@ public class Character {
 		return damage;
 	}
 	
-	public void addWeapon(String songName) {
-        weapons.add(WeaponFactory.createPlayItem(songName));
+	public void addWeapon(Weapon pWeapon) {
+        weapons.add();
     }
 }
